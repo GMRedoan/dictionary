@@ -150,3 +150,9 @@ const searchBtn = document.getElementById('btn-search').addEventListener('click'
         displayWord(fiterWords)
     })
   })
+
+
+//   log in
+ const getStarted = document.getElementById('get-started').addEventListener('click', ()=>{
+     alert('log in successful')
+ })
