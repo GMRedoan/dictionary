@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Janala</title>
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+    <!-- font awesome cdn -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!-- daisyui and tailwind cdn -->
+      <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<!-- font -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<!-- style -->
+ <link rel="stylesheet" href="style.css">
+</head>
+ <body>
+     <header class="bg-[#badeff42] border-[1px] border-[#c6bdbd]">
+        <!-- nav section -->
+        <section class="max-w-[1400px] mx-auto md:flex justify-between px-[10px] py-[20px]">
+            <div class="flex items-center gap-[4px]">
+                <p class="font-semibold text-[18px]">English</p>
+                <img src="assets/logo.png" alt="">
+                <p class="font-bangla font-medium text-[18px]">জানালা</p>
+            </div>
+            <div class="flex">
+                <button class="border-[1.5px] border-[#422ad5] px-[10px] mr-[10px] rounded-[5px] text-[#422ad5] font-semibold hover:bg-[#422ad5] hover:text-white"><i class="fa-solid fa-circle-question mr-[5px]"></i>FAQ</button>
+                <button class="border-[1.5px] border-[#422ad5] px-[10px] mr-[10px] rounded-[5px] text-[#422ad5] font-semibold hover:bg-[#422ad5] hover:text-white"><i class="fa-brands fa-leanpub mr-[5px]"></i>Learn</button>
+                <button class="border-[1.5px] border-[#422ad5] px-[10px] rounded-[5px] text-[#422ad5] font-semibold hover:bg-[#422ad5] hover:text-white"><i class="fa-solid fa-arrow-right-from-bracket mr-[5px]"></i>Logout</button>
+            </div>
+        </section>
+    </header>
+    <main>
+        <!-- english section -->
+        <section class="max-w-[1400px] mx-auto md:flex justify-between items-center px-[10px] py-[20px] gap-[230px]">
+            <div>
+                <h3 class="text-[48px] font-bold"><span class="text-[#00bcff]">English</span> is Easy !!</h3>
+                <p class="font-bangla font-medium text-[20px] my-[20px]">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা <br> আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
+                <input class="md:pl-[20px] w-[50%] py-[7px] border-gray-400 rounded-[7px] mt-[30px]" placeholder="Enter Your Name" type="text"> <br>
+                <input class="md:pl-[20px] w-[50%] py-[7px] border-gray-400 rounded-[7px] my-[20px]" placeholder="Enter Your password" type="password" name="" id=""> <br>
+                <button class="bg-[#422ad5] text-white font-medium p-[10px] px-[20px] rounded-[8px]">Get Started</button>
+            </div>
+            <div>
+                <img src="assets/hero-student.png" alt="">
+            </div>
+        </section>
+
+        <!-- Lets section -->
+         <section>
+            <div>
+              <h3 class="text-[36px] font-bold text-center"><span class="text-[#00bcff]">Let's </span>Learn English</h3>
+             </div>
+             <div id="level-container" class="flex flex-wrap justify-center gap-[10px] my-[30px] "></div>
+         </section>
+         <!-- search -->
+<div class="join flex justify-center mb-[20px]" >
+  <div>
+    <label class="input validator join-item">
+       <input id="input-search" type="text" placeholder="Search words" required />
+    </label>
+   </div>
+  <button id="btn-search" class="btn btn-primary join-item">Search</button>
+</div>
+
+         <!-- spin loading -->
+        <section id="spin" class="mb-[30px] flex justify-center items-center hidden">
+            <span class="loading loading-infinity loading-xl"></span>
+        </section>
+         <!-- word section -->
+          <section id="word-container" class="bg-gray-200 p-[20px] rounded-[10px] mx-[20px] md:grid grid-cols-3 gap-[10px]">
+             <div class="p-[40px] text-center col-span-full">
+                <p class="text-gray-500 text-[18px] font-bangla mb-[15px]">
+                    আপনি এখনো কোন Lesson Select করেন। 
+                </p>
+                <h3 class="text-[32px] font-medium font-bangla">
+                    একটি Lesson Select করুন।
+                </h3>
+            </div>
+           </section>
+
+           <!-- Open the modal using ID.showModal() method -->
+            
+ <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <div id="details-container" class=" p-[10px] rounded-[10px] border border-sky-200">
+     </div>
+     <div class="modal-action">
+       <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn text-[#422ad5] bg-white font-medium hover:bg-[#422ad5] hover:text-white ">Complete Learning</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+    </main>
+
+    <script src="script/index.js"></script>
+</body>
+</html> 
